@@ -1,25 +1,40 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Page Source Reader</title>
-<style>
-body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 12px; width: 520px; }
-.row { display:flex; gap:8px; flex-wrap: wrap; margin-bottom:8px; }
-button { padding:8px 12px; border-radius:10px; border:1px solid #ddd; cursor:pointer; }
-textarea { width:100%; height: 360px; white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-.meta { font-size:12px; color:#666; }
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link Highlight</title>
+<link rel="stylesheet" href="./popup.css">
 </head>
 <body>
-<div class="row">
-<button id="btn-dom">DOM を取得（表示後のHTML）</button>
-<button id="btn-raw">生HTML を取得（サーバー送出）</button>
-<button id="btn-save" title="表示中の内容を .html として保存">保存</button>
-</div>
-<div class="meta" id="info">準備完了</div>
-<textarea id="output" placeholder="ここにHTMLが出力されます"></textarea>
-<script src="popup.js"></script>
+	<div class="card">
+		<div class="toggle">
+		<span>OFF/ON</span>
+		<label class="switch">
+			<input type="checkbox" checked>
+			<span class="slider"></span>
+		</label>
+		</div>
+
+		<!-- <div class="section">
+		<h3>基本設定</h3>
+		<div class="colors">
+			<button class="rainbow">Rainbow</button>
+			<button>Black</button>
+			<button>Brown</button>
+			<button>Orange</button>
+			<button>Yellow</button>
+			<button>Green</button>
+			<button>Blue</button>
+			<button>Purple</button>
+			<button>Pink</button>
+			<button>Red</button>
+			<button style="grid-column: span 2;">ユーザ</button>
+		</div>
+		</div> -->
+
+		<button id="glow-btn">光らせる</button>
+	</div>
+	<script src="content.js"></script>
 </body>
 </html>

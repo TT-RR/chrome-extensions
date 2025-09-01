@@ -1,0 +1,8 @@
+{
+	"manifest_version": 3,
+	"name": "Visited Link Glow",
+	"version": "1.0",
+	"action": { "default_popup": "popup.html" },
+	"permissions": ["scripting", "activeTab"],
+	"host_permissions": ["<all_urls>"]
+}

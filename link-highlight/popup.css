@@ -47,7 +47,7 @@ body {
 	background: #fff;
 	text-align: center;
 }
-.glow-btn {
+#glow-btn {
 	background: linear-gradient(to right,#f35c5c,#e8ac51,#f2e55c,#48d183,#6eb7ff,#4784bf, violet);   
 	border: none;
 	border-radius: 10px;
