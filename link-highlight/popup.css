@@ -1,0 +1,93 @@
+body {
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: #fff9e6;
+    border-radius: 15px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+	width: 320px;
+	padding: 15px;
+	margin: 0;
+}
+.toggle {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.section {
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 12px;
+	text-align: center;
+}
+.section h3 {
+	margin: 5px 0;
+}
+.colors {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+	margin-top: 10px;
+}
+.colors button {
+	padding: 6px 8px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	font-weight: bold;
+}
+.rainbow {
+	background: linear-gradient(to right,#f35c5c,#e8ac51,#f2e55c,#48d183,#6eb7ff,#4784bf, violet);   
+	color: #000;
+}
+.footer {
+	margin-top: 12px;
+	padding: 8px;
+	border-radius: 10px;
+	background: #fff;
+	text-align: center;
+}
+.glow-btn {
+	background: linear-gradient(to right,#f35c5c,#e8ac51,#f2e55c,#48d183,#6eb7ff,#4784bf, violet);   
+	border: none;
+	border-radius: 10px;
+	color: #000;
+	font-weight: bold;
+	padding: 10px;
+	width: 100%;
+	cursor: pointer;
+}
+/* スイッチ風トグル */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+}
+.switch input { display:none; }
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0; left: 0;
+	right: 0; bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 20px;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 14px;
+	width: 14px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+input:checked + .slider {
+	background-color: #4dd3ff;
+}
+input:checked + .slider:before {
+	transform: translateX(20px);
+}
