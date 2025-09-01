@@ -1,0 +1,24 @@
+/* 一度踏んだリンクの見た目（控えめな発光） */
+a.visited-glow {
+  position: relative;
+  outline: 2px solid rgba(255, 196, 0, 0.7);
+  border-radius: 4px;
+  box-shadow: 0 0 0.35rem rgba(255, 196, 0, 0.8),
+              0 0 0.8rem rgba(255, 196, 0, 0.5);
+  animation: vg-pulse 1.8s ease-in-out infinite;
+}
+
+/* 画像やカード丸ごとがリンクの時にも分かるように下地をうっすら */
+a.visited-glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 6px;
+  box-shadow: 0 0 1.2rem rgba(255, 196, 0, 0.35);
+  pointer-events: none;
+}
+
+@keyframes vg-pulse {
+  0%, 100% { box-shadow: 0 0 0.35rem rgba(255,196,0,.8), 0 0 0.8rem rgba(255,196,0,.5); }
+  50%      { box-shadow: 0 0 0.6rem rgba(255,196,0,1),  0 0 1.1rem rgba(255,196,0,.6); }
+}

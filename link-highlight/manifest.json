@@ -1,0 +1,15 @@
+{
+	"manifest_version": 3,
+	"name": "Visited Link Glow",
+	"version": "1.0.0",
+	"description": "自分が一度踏んだリンクを光らせて表示します。",
+	"permissions": ["storage"],
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"],
+			"css": ["styles.css"],
+			"run_at": "document_idle"
+		}
+	]
+}
