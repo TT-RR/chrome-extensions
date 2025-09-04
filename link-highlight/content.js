@@ -12,15 +12,29 @@ document.getElementById('glow-btn').addEventListener('click', async () => {
           s.id = '__glow_style__';
           s.textContent = `
             a.glow-link {
-              outline: 2px solid orange;
+              outline: 4px solid #eaea00ff;
               border-radius: 4px;
-              box-shadow: 0 0 5px orange;
+              box-shadow: 0 0 5px #eaea00ff;
+              transition: background-color 0.3s;
+            }
+            a.glow-visited {
+              outline: 2px solid gray;
+              box-shadow: 0 0 5px gray;
+              color: #666 !important;
             }
           `;
           document.head.appendChild(s);
         }
-        // ページ内のすべてのリンクにクラス付与
-        document.querySelectorAll('a[href]').forEach(a => a.classList.add('glow-link'));
+
+        // ページ内のすべてのリンクにクラス付与 & クリックイベント
+        document.querySelectorAll('a[href]').forEach(a => {
+          a.classList.add('glow-link');
+
+          // クリック時にクラスを追加
+          a.addEventListener('click', () => {
+            a.classList.add('glow-visited');
+          }, { once: true }); // once:true にすると1回だけ実行
+        });
       }
     });
   } catch (err) {
