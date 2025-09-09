@@ -40,6 +40,9 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
 		let errors = [];
 
 		all_h3.forEach(h3 => {
+			if(h3.classList.contains("noneContent")) {
+				return;
+			}
 			// h3のクラスが className だけでなければエラーに追加
 			if (!h3.classList.contains(className)) {
 				errors.push(h3.outerHTML);
