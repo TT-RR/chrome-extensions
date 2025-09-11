@@ -1,4 +1,4 @@
-document.getElementById("checkBtn").addEventListener("click", async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // 現在アクティブなタブを取得
 	let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -43,7 +43,7 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
 			if(h3.classList.contains("noneContent")) {
 				return;
 			}
-			// h3のクラスが className だけでなければエラーに追加
+			// h3のクラスが article_title3 以外ならエラーに追加
 			if (!h3.classList.contains(className)) {
 				errors.push(h3.outerHTML);
 			}
