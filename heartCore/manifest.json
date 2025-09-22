@@ -1,0 +1,11 @@
+{
+	"manifest_version": 3,
+	"name": "Div Styler",
+	"version": "1.0.1",
+	"content_scripts": [
+		{
+			"matches": ["https://www.ste2.aiful.co.jp/*"],
+			"js": ["content.js"]
+		}
+	]
+}
